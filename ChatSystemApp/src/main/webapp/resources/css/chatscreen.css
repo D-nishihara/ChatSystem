@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+html,body {
+	height:100%;
+}
+
+.flexcontainer {
+	display:flex;
+	flex-direction:column;
+}
+
+.flexmain {
+	flex:1;
+}
+
+.flexside {
+	display:flex;
+	height:100%;
+	width:200px;
+}
+
+.flexfutter {
+	flex:0;
+}

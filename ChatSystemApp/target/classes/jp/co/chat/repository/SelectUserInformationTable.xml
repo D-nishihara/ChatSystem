@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.chat.repository.SelectUserInformationTable">
+	<resultMap type="jp.co.chat.dto.ChatUserInformationDto" id="userInfomationResultMap">
+		<result property="userId" column="user_id" />
+		<result property="userPassword" column="user_password" />
+	</resultMap>
+	<select id="SelectUserInformation" resultMap="userInfomationResultMap">
+		SELECT * FROM dbo.user_information_table 
+		<where>
+			<if test="userId != null and userPassword != null">
+				user_id = #{userId} and  user_password = #{userPassword}
+			</if>
+		</where>  
+	</select>
+</mapper>
