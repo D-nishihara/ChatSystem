@@ -11,19 +11,23 @@
 <body>
 
 	<div class="flexside">
-		サイド
+		<button id="connection" onclick="connection()">ルーム作成</button>
 		<div class="flexcontainer">
-			<div class="flexmain">
-				メイン
+			<div class="flexmain" id="response">
 			</div>
 
 			<div class="flexfutter">
-				フッター	
+				<input type="text" id="textinput">
+				<button id="send" onclick="send()">送信</button>	
 			</div>
 		</div>
 	</div>
 
 <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
 <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
+<script src="<c:url value="/resources/js/stomp.min.js" />"></script>
+<script src="<c:url value="/resources/js/sockjs.js" />"></script>
+<script src="<c:url value="/resources/js/sockjs.min.js" />"></script>
+<script src="<c:url value="/resources/js/chatscreen.js" />"></script>
 </body>
 </html>
